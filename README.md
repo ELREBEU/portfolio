@@ -10,7 +10,7 @@
 
 *"La securite parfaite n'existe pas, mais l'inattention est une faille qu'aucun pare-feu ne peut corriger."*
 
-[Voir le Portfolio](https://votre-portfolio.com) | [Me Contacter](mailto:oussama.daoudi@etu.umontpellier.fr)
+[Voir le Portfolio](https://portfolio-oussama-daoudi.vercel.app/) | [Me Contacter](mailto:oussama.daoudi@etu.umontpellier.fr)
 
 </div>
 
@@ -67,7 +67,7 @@ JavaScript  ████████████████░░░░░░  
 
 ```bash
 # Cloner le repository
-git clone https://github.com/votre-username/portfolio-react.git
+git clone https://github.com/ELREBEU/portfolio.git
 
 # Acceder au dossier
 cd portfolio-react
