@@ -633,13 +633,17 @@ footer p {
     bottom: 0;
     background: rgba(10, 10, 10, 0.98);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 0;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   nav ul.nav-open {
@@ -650,6 +654,7 @@ footer p {
   nav ul li {
     width: 100%;
     text-align: center;
+    flex-shrink: 0;
   }
 
   nav ul li a {
@@ -657,6 +662,7 @@ footer p {
     padding: 1rem 2rem;
     font-size: 1.2rem;
     border-bottom: 1px solid rgba(44, 152, 240, 0.1);
+    color: #fff;
   }
 
   nav ul li a:hover {
