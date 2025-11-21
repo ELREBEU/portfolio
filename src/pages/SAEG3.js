@@ -61,7 +61,6 @@ assurer la redondance des données et configurer Traefik pour fournir un accès 
 sécurisé à chaque service.
 La prochaine étape consistera à intégrer Mailcow, ce qui demandera un travail
 supplémentaire de gestion DNS, sécurité SMTP/IMAP et haute disponibilité."
-            github="https://github.com/ton-profil/ton-projet-infra"
         />
     );
 };

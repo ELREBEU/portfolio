@@ -27,7 +27,6 @@ const VoteProject = () => {
         "Protection contre les votes multiples"
       ]}
       challenges="Le principal défi a été d'assurer la sécurité et l'anonymat des votes tout en maintenant l'intégrité du système. J'ai dû implémenter un système de cryptage robuste et concevoir une architecture qui empêche les fraudes tout en garantissant qu'un électeur ne peut voter qu'une seule fois."
-      github="https://github.com/ELREBEU/vote-electronique"
     />
   );
 };

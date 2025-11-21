@@ -48,7 +48,6 @@ sur plusieurs sites tout en gérant les temps de chargement, les éléments dyna
 aléas des pages web modernes.
 Ce projet a été un excellent exercice pour renforcer mes compétences en scraping, automation
 et compréhension des interactions web."
-            github="https://github.com/ELREBEU"
         />
     );
 };
