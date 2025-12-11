@@ -16,6 +16,7 @@ import MimirProject from "./pages/MimirProject";
 import MultiServicesPlatformProject from "./pages/SAEG3";
 import CasseurProject from "./pages/CasseurProject";
 import WebScrapingProject from "./pages/WebScrapingProject";
+import MnistProject from "./pages/MnistProject";
 
 function App() {
   useEffect(() => {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/saeg3" element={<MultiServicesPlatformProject/>}/>
         <Route path="/casseur" element={<CasseurProject/>}/>
         <Route path="/webscrapping" element={<WebScrapingProject/>}/>
+        <Route path="/mnist" element={<MnistProject/>}/>
       </Routes>
       <Footer />
       <Loader />

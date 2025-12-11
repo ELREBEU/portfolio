@@ -7,6 +7,7 @@ import project6 from '../assets/images/project-6.png';
 import streamImg from '../assets/images/streamify.png';
 import mimirImg from '../assets/images/mimir.png';
 import saeg3Img from '../assets/images/saeg3-1.png';
+import mnistImg from '../assets/images/mnist.png';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -60,6 +61,13 @@ const Projects = () => {
           tech: 'Python',
           image: mimirImg,
           link: '/Mimir',
+          type: 'perso'
+      },
+      {
+          title: 'MNIST - Reconnaissance de Chiffres',
+          tech: 'Python/PyTorch',
+          image: mnistImg,
+          link: '/mnist',
           type: 'perso'
       },
   ];
