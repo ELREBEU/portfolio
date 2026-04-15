@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
 
+const ROLES = [
+  'Cybersécurité & Pentest',
+  'Infrastructure & DevSecOps',
+  'Développement & Automatisation',
+];
+
 const Hero = () => {
-  const roles = [
-    'Cybersécurité & Pentest',
-    'Infrastructure & DevSecOps',
-    'Développement & Automatisation',
-  ];
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const current = roles[roleIndex];
+    const current = ROLES[roleIndex];
     let timeout;
 
     if (!isDeleting && text === current) {
       timeout = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && text === '') {
       setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % roles.length);
+      setRoleIndex((prev) => (prev + 1) % ROLES.length);
     } else {
       timeout = setTimeout(() => {
         setText(isDeleting ? current.substring(0, text.length - 1) : current.substring(0, text.length + 1));
@@ -26,7 +27,7 @@ const Hero = () => {
     }
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex, roles]);
+  }, [text, isDeleting, roleIndex]);
 
   return (
     <section id="home-section">
