@@ -17,25 +17,22 @@ const Footer = () => {
             <div className="thm-card">
               <iframe
                 src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3092151"
-                style={{border: 'none', width: '100%', height: '150px'}}
+                style={{ border: 'none', width: '100%', height: '150px' }}
                 title="TryHackMe Badge"
               ></iframe>
             </div>
           </div>
 
-          <div className="contact-question" style={{width:'101%'}}>
+          <div className="contact-question">
             <h3>Vous avez une question ?</h3>
-            <a href="tel:+33769077584" className="contact-item">
-              📞 +33 7 69 07 75 84
-            </a>
             <a href="mailto:oussama.daoudi@etu.umontpellier.fr" className="contact-item">
               ✉️ oussama.daoudi@etu.umontpellier.fr
             </a>
           </div>
         </div>
       </div>
-      <div style={{textAlign: 'center', marginTop: '50px'}}>
-        <p>&copy; 2025 Oussama Daoudi. Tous droits réservés.</p>
+      <div style={{ textAlign: 'center', marginTop: '50px' }}>
+        <p>&copy; 2026 Oussama Daoudi. Tous droits réservés.</p>
       </div>
     </footer>
   );

@@ -8,46 +8,39 @@ const WebScrapingProject = () => {
 
     return (
         <ProjectDetail
-            title="Web Scraping"
-            subtitle="Projet personnel d’automatisation et collecte de données en Python & Java"
+            title="Web Scraping & Automatisation"
+            subtitle="Automatisation avancée : création de comptes, scraping de prix — Python (Selenium/Playwright) & Java"
             image={webScrapingImg1}
             images={imagesProject}
-            description="
-Ce projet de Web Scraping a été développé dans un cadre personnel afin d’apprendre à automatiser
-des tâches sur le web et à extraire des données de manière contrôlée.
-Il comprend deux versions : une première en **Python**, utilisant Selenium pour automatiser
-des interactions complexes avec des sites web, et une seconde en **Java**, dédiée à l’exploration
-automatisée de sites afin de rechercher et comparer des informations pertinentes (comme des prix de billets d’avion).
-Le projet permet de comprendre les mécanismes du DOM, la gestion des navigateurs automatisés,
-et les techniques utilisées pour éviter la détection des bots."
-            technologies={[
-                'Python',
-                'Java',
-                'Selenium',
-                'Playwright',
-                'WebDriver',
-                'Automatisation Web',
-                'DOM Parsing',
-                'Data Processing'
-            ]}
+            date="2024"
+            team="Duo"
+            context="Projet personnel"
+            status="done"
+            description={`Ce projet de Web Scraping a été développé en duo pour automatiser des tâches complexes sur le web. Le premier volet permettait de créer automatiquement des comptes Instagram en boucle en utilisant des adresses mail temporaires générées automatiquement, avec un scraper initialement en Selenium puis migré vers Playwright pour plus de fiabilité et de performance.
+
+Le second volet, développé en Java, permettait de scraper automatiquement les prix des billets d'avion sur plusieurs sites pour trouver les offres les moins chères. Le programme comparait les prix en temps réel et identifiait les meilleures opportunités.
+
+Ces projets m'ont permis de comprendre en profondeur les mécanismes du DOM, la gestion des navigateurs automatisés, les techniques d'anti-détection de bots et la migration entre frameworks d'automatisation.`}
+            technologies={['Python', 'Java', 'Selenium', 'Playwright', 'WebDriver', 'Automatisation Web', 'DOM Parsing', 'Mails temporaires']}
             features={[
-                "Automatisation complète de parcours web (clics, formulaires, actions répétées)",
-                "Web scraping basé sur Selenium pour interagir avec des sites dynamiques",
-                "Version Python pour automatiser la création de comptes sur une plateforme cible",
-                "Version Java pour collecter automatiquement les meilleurs prix de billets d’avion",
-                "Mécanismes d’imitation du comportement humain pour éviter la détection",
+                "Création automatisée de comptes Instagram en boucle",
+                "Génération automatique de mails temporaires pour l'inscription",
+                "Migration Selenium → Playwright pour plus de performance",
+                "Scraping automatique des prix de billets d'avion (Java)",
+                "Comparaison de prix en temps réel sur plusieurs sites",
+                "Mécanismes d'imitation du comportement humain (anti-détection)",
                 "Exploration du DOM et récupération de données complexes",
-                "Code structuré pour être réutilisé et adapté à d'autres cas d’usage",
+                "Code structuré et réutilisable pour d'autres cas d'usage"
             ]}
-            challenges="
-Le plus complexe a été de manipuler Selenium et Playwright de manière fiable avec plusieurs navigateurs,
-et d’automatiser des interactions sophistiquées tout en contournant les mécanismes simples
-de détection des bots.
-En Java, la difficulté principale résidait dans l'analyse du DOM et la collecte des informations
-sur plusieurs sites tout en gérant les temps de chargement, les éléments dynamiques et les
-aléas des pages web modernes.
-Ce projet a été un excellent exercice pour renforcer mes compétences en scraping, automation
-et compréhension des interactions web."
+            challenges="Le plus complexe a été de contourner les mécanismes de détection de bots (captchas, rate limiting, fingerprinting) tout en maintenant un taux de succès élevé. La migration de Selenium vers Playwright a été motivée par des problèmes de stabilité. En Java, la difficulté résidait dans l'analyse du DOM de sites dynamiques et la gestion des temps de chargement variables sur les comparateurs de vols."
+            softSkills={[
+                "Travail en duo",
+                "Reverse engineering web",
+                "Migration de framework",
+                "Résolution de problèmes",
+                "Automatisation avancée"
+            ]}
+            takeaway="Ce projet m'a appris à penser comme un automaticien du web : comprendre le DOM en profondeur, imiter le comportement humain, et gérer les cas d'erreur sur des sites qui changent constamment. La collaboration en duo a aussi été enrichissante pour partager les approches et débugger ensemble."
         />
     );
 };

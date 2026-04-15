@@ -6,23 +6,23 @@ const Blog = () => {
       <div className="container">
         <div className="heading-section">
           <h1 className="big">Futur</h1>
-          <h2>Mon futur</h2>
+          <h2>Mon Futur</h2>
         </div>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <p>
-            <strong>Pentester</strong>, c'est le métier que je souhaite exercer plus tard. Passionné depuis toujours par la cybersécurité, et plus particulièrement par le pentest, je considère pouvoir en faire ma profession comme un véritable rêve.
+            Mon objectif est de devenir un expert en <strong>infrastructure et sécurité informatique</strong>. Que ce soit en tant qu'<strong>Administrateur Systèmes et Réseaux</strong>, <strong>DevSecOps</strong> ou <strong>Consultant en Cybersécurité</strong>, je souhaite mettre mes compétences au service de la protection des données et de la résilience des systèmes.
           </p>
 
           <p>
-            Après mon <strong>BUT Informatique</strong>, je prévois de poursuivre mes études avec un <strong>Master en Cybersécurité</strong> afin d'approfondir mes connaissances et de me spécialiser davantage. Par ailleurs, je vise à obtenir plusieurs certifications reconnues dans le domaine, notamment l'<strong>OSCP (Offensive Security Certified Professional)</strong>, une référence mondiale en cybersécurité.
+            Plutôt que de simplement tester des failles, je veux concevoir des environnements robustes dès leur création. Après mon <strong>BUT Informatique</strong>, je compte poursuivre en <strong>Master spécialisé en Cybersécurité</strong> pour maîtriser aussi bien la défense (Blue Team) que les méthodologies d'audit. Je vise également des certifications stratégiques comme la <strong>CompTIA Security+</strong> ou l'<strong>OSCP</strong> pour valider mon expertise technique.
           </p>
 
           <p>
-            Dès <strong>2025</strong>, je compte également me lancer dans le <strong>bug bounty</strong> sur des plateformes comme <strong>HackerOne</strong> et <strong>YesWeHack</strong>. Le bug bounty représente pour moi une opportunité unique de pratiquer ma passion en toute légalité, directement depuis chez moi.
+            Parallèlement à mon activité professionnelle, je continuerai de pratiquer le <strong>bug bounty</strong> sur des plateformes comme <strong>YesWeHack</strong> ou <strong>HackerOne</strong>. Cela me permet de garder un pied dans l'offensif, de rester à l'affût des nouvelles vulnérabilités et d'affiner mon esprit d'analyse de manière concrète et légale.
           </p>
 
           <p>
-            Côté professionnel, je serais particulièrement enthousiaste à l'idée d'intégrer des entreprises reconnues dans ce domaine, telles que <strong>Devensys</strong> à Montpellier ou <strong>Ziwit</strong>, toutes deux réputées pour leur expertise en cybersécurité.
+            Mon ambition est d'apporter cette vision globale de la sécurité à des acteurs majeurs de l'écosystème numérique, notamment des entreprises spécialisées comme <strong>Devensys</strong> ou <strong>Ziwit</strong>, où l'expertise technique et la polyvalence sont au cœur des enjeux.
           </p>
         </div>
       </div>

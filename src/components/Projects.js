@@ -14,67 +14,98 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Plateforme Sécurisée Multi-Services',
+      tech: 'Docker · Terraform · Keycloak',
+      image: saeg3Img,
+      link: '/saeg3',
+      type: 'IUT',
+      date: 'Sep 2025 - Mar 2026',
+      team: 'Équipe de 3',
+      status: 'done',
+    },
+    {
       title: 'Application de vote électronique',
-      tech: 'Java',
+      tech: 'Java · Spring Boot · Vue.js',
       image: project5,
       link: '/vote',
-      type: 'IUT'
-
+      type: 'IUT',
+      date: 'Oct 2024 - Juin 2025',
+      team: 'Équipe de 5',
+      status: 'done',
     },
-      {
-        title: 'Plateforme Sécurisée Multi-Services',
-        tech: 'Docker',
-        image: saeg3Img,
-        link: '/saeg3',
-        type: 'IUT'
-      },
     {
-      title: 'Keylogger',
-      tech: 'Python',
+      title: 'Streamify',
+      tech: 'FastAPI · React · Docker',
+      image: streamImg,
+      link: '/streamify',
+      type: 'perso',
+      date: 'Depuis Oct 2025',
+      team: 'Solo',
+      status: 'ongoing',
+    },
+    {
+      title: 'Keylogger multi-plateforme',
+      tech: 'Python · C (X11/WinAPI)',
       image: project1,
       link: '/keylogger',
-      type: 'perso'
+      type: 'perso',
+      date: 'Nov 2024 - Nov 2025',
+      team: 'Solo',
+      status: 'done',
     },
-      {
-          title: 'Application de Streaming',
-          tech: 'Python(FastAPI)/React Native',
-          image: streamImg,
-          link: '/streamify',
-          type: 'perso'
-      },
     {
-      title: 'Web Scraping',
-      tech: 'Python & Java',
-      image: project6,
-      link: '/webscrapping',
-      type: 'perso'
+      title: 'Mimir - Scanner offensif',
+      tech: 'Python · Nmap · Nikto · WPScan · Feroxbuster',
+      image: mimirImg,
+      link: '/Mimir',
+      type: 'perso',
+      date: 'Juil 2025',
+      team: 'Solo',
+      status: 'paused',
+    },
+    {
+      title: 'MNIST - Deep Learning',
+      tech: 'Python · PyTorch · CUDA',
+      image: mnistImg,
+      link: '/mnist',
+      type: 'perso',
+      date: 'Déc 2025',
+      team: 'Solo',
+      status: 'done',
     },
     {
       title: 'Casseur de mot de passe',
-      tech: 'Python',
+      tech: 'Python · Hashlib',
       image: project4,
       link: '/casseur',
-      type: 'perso'
+      type: 'perso',
+      date: 'Nov 2024',
+      team: 'Solo',
+      status: 'done',
     },
-      {
-          title: 'Mimir',
-          tech: 'Python',
-          image: mimirImg,
-          link: '/Mimir',
-          type: 'perso'
-      },
-      {
-          title: 'MNIST - Reconnaissance de Chiffres',
-          tech: 'Python/PyTorch',
-          image: mnistImg,
-          link: '/mnist',
-          type: 'perso'
-      },
+    {
+      title: 'Web Scraping & Automatisation',
+      tech: 'Python · Java · Playwright · Selenium',
+      image: project6,
+      link: '/webscrapping',
+      type: 'perso',
+      date: '2024',
+      team: 'Duo',
+      status: 'done',
+    },
   ];
 
   const filteredProjects = filter === 'all'
     ? projects
     : projects.filter(project => project.type === filter);
+
+  const getStatusLabel = (status) => {
+    switch (status) {
+      case 'ongoing': return { text: '⚡ En cours', cls: 'status-ongoing' };
+      case 'paused': return { text: '⏸️ Mis en pause', cls: 'status-paused' };
+      default: return { text: '✅ Terminé', cls: 'status-done' };
+    }
+  };
 
   return (
     <section id="projects-section">
@@ -82,7 +113,7 @@ const Projects = () => {
         <div className="heading-section">
           <h1 className="big">Projets</h1>
           <h2>Mes Projets</h2>
-          <p>Découvrez les projets que j'ai réalisés seul ou en groupe ! Cliquez dessus !</p>
+          <p>Réalisations personnelles et académiques — cliquez pour en savoir plus.</p>
         </div>
 
         <div className="filter-buttons">
@@ -90,7 +121,7 @@ const Projects = () => {
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
             onClick={() => setFilter('all')}
           >
-            Tous les projets
+            Tous
           </button>
           <button
             className={`filter-btn ${filter === 'perso' ? 'active' : ''}`}
@@ -102,26 +133,34 @@ const Projects = () => {
             className={`filter-btn ${filter === 'IUT' ? 'active' : ''}`}
             onClick={() => setFilter('IUT')}
           >
-            Projets IUT
+            Projets académiques
           </button>
         </div>
 
         <div className="projects-grid">
-          {filteredProjects.map((project, index) => (
-            <Link
-              key={index}
-              to={project.link}
-              className="project-item"
-              style={{backgroundImage: `url(${project.image})`}}
-            >
-              <div className="project-overlay">
-                <div className="project-text">
-                  <h3>{project.title}</h3>
-                  <span>{project.tech}</span>
+          {filteredProjects.map((project, index) => {
+            const statusInfo = getStatusLabel(project.status);
+            return (
+              <Link
+                key={index}
+                to={project.link}
+                className="project-item"
+                style={{ backgroundImage: `url(${project.image})` }}
+              >
+                <div className="project-overlay">
+                  <div className="project-text">
+                    <h3>{project.title}</h3>
+                    <span>{project.tech}</span>
+                    <div className="project-meta">
+                      <span className="project-meta-tag date">{project.date}</span>
+                      <span className="project-meta-tag team">{project.team}</span>
+                      <span className={`project-meta-tag ${statusInfo.cls}`}>{statusInfo.text}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -18,6 +18,10 @@ const Contact = () => {
           </p>
 
           <p>
+            Plus récemment, je me suis passionné pour l'<strong>électronique embarquée</strong>. Avec mon <strong>ESP32</strong>, mes capteurs, écrans, LEDs et ma breadboard, je m'amuse à concevoir des circuits et de petits projets hardware sur mon temps libre — comme piloter une LED depuis une page web via un réseau WiFi créé par l'ESP32. Je possède également un <strong>LilyGo T-Embed CC1101</strong> qui me permet d'expérimenter avec les <strong>cartes NFC</strong>, le <strong>WiFi</strong> et le <strong>Bluetooth</strong> dans un cadre d'apprentissage de la sécurité radio.
+          </p>
+
+          <p>
             Ce que je souhaite avant tout, c'est continuer à concilier ma passion pour l'informatique avec le <strong>sport</strong>, un domaine souvent perçu comme incompatible avec celui des technologies. Pourtant, j'ai toujours aimé faire les deux et je veux prouver qu'il est possible de travailler dans un domaine aussi exigeant que l'informatique tout en restant actif physiquement.
           </p>
 
