@@ -8,153 +8,139 @@ const Apprentissage = () => {
     const competences = [
         {
             id: 1,
-            title: "Administrer des systèmes informatiques communicants complexes",
-            niveau: "Niveau 2",
-            reference: "Déployer et sécuriser une architecture réseau, configurer un poste de travail, automatiser des tâches d'administration, assurer la sécurité des services.",
+            title: "Faire évoluer et maintenir un système informatique communicant",
+            niveau: "Niveau 3",
+            reference: "Automatiser le déploiement, configurer des services avancés, appliquer une politique de sécurité et maintenir l'infrastructure réseau.",
             items: [
                 {
-                    code: "AC21.01",
-                    label: "Déployer des services dans une architecture réseau",
-                    trace: "Stage au CHU de Montpellier",
+                    code: "AC33.01",
+                    label: "Créer des processus de traitement automatisé",
+                    trace: "Stage chez Diag2Tec (DevSecOps)",
                     points: [
-                        "Installation d'un environnement de développement WAMP sur serveur Linux : configuration d'Apache, MySQL, PHP, configuration SSL pour l'accès sécurisé.",
-                        "Mise en place d'un routage entre deux interfaces réseau : l'une connectée à l'intranet du CHU, l'autre à un réseau dédié aux postes de travail. ➔ Preuve de compréhension du L2/L3 et des tables de routage sous iproute2.",
-                        "Validation : accès simultané à l'application médicale depuis le LAN interne et à l'outil de test depuis un réseau isolé, avec pare-feu iptables finement configuré pour autoriser uniquement les ports nécessaires."
+                        "Refonte complète du pipeline CI/CD avec GitHub Actions pour l'automatisation des tests et de l'intégration.",
+                        "Automatisation du déploiement sur GitHub Container Registry (GHCR) et optimisation des builds via le cache Docker.",
+                        "Validation : Réduction significative du temps de build et de déploiement, assurant une livraison continue fiable."
                     ]
                 },
                 {
-                    code: "AC21.02",
-                    label: "Sécuriser les applications et les services",
-                    trace: "Projet : Keylogger multi-plateforme",
+                    code: "AC33.02",
+                    label: "Configurer un serveur et des services réseaux de manière avancée",
+                    trace: "Projet : Infrastructure Cloud Privé souveraine",
                     points: [
-                        "Réalisation d'un keylogger capable de détecter l'OS (Windows/Linux) et de s'installer en service masqué : à l'aide de scripts d'installation automatisés (systemd service sous Linux, tâche planifiée sous Windows).",
-                        "Implémentation d'un chiffrement des données collectées (AES) avant transfert via SMTP : utilisation de la bibliothèque cryptography en Python.",
-                        "Integration d'un auto-démarrage au login administrateur, dissimulation du processus sous un nom inoffensif.",
-                        "Validation : le service ne laisse pas de traces visibles dans la liste standard des processus, et les données recueillies sont chiffrées sur le disque avant envoi."
+                        "Orchestration d'un écosystème collaboratif complet sous Docker (GitLab CI/CD, Stalwart/SOGo, SFTPGo).",
+                        "Mise en place d'un reverse proxy Traefik v3 avec gestion automatisée des certificats HTTPS/TLS 1.3.",
+                        "Centralisation de l'identité (IAM) via Keycloak et OpenLDAP avec authentification SSO OIDC et MFA.",
+                        "Validation : Infrastructure hautement disponible, sécurisée et centralisée pour les utilisateurs."
                     ]
                 },
                 {
-                    code: "AC21.03",
-                    label: "Automatiser des tâches d'administration",
-                    trace: "Développement d'un scanner de ports et simulateur d'attaque DOS (en C)",
+                    code: "AC33.03",
+                    label: "Appliquer une politique de sécurité au niveau de l'infrastructure",
+                    trace: "Stage chez Diag2Tec (AppSec & Audit) & Infrastructure Cloud",
                     points: [
-                        "Écriture d'un script shell (bash) intégrant le scanner : exécution automatisée sur un réseau de test, génération de rapports au format CSV.",
-                        "Création d'un démon Linux capable de lancer périodiquement ce scanner, d'archiver les résultats et d'alerter par e-mail en cas de ports ouverts inattendus.",
-                        "Validation : démon tournant en tâche de fond (systemd), alertant automatiquement si un service non autorisé apparaît, et réinitialisant les règles iptables au besoin."
+                        "Sécurisation d'une application web : restriction d'uploads, flux de création de compte sécurisé, mots de passe temporaires et A2F.",
+                        "Mise en place d'une approche Zero Trust via Cloudflare Tunnel pour masquer l'infrastructure publique.",
+                        "Réalisation d'un audit de sécurité sur une infrastructure tierce pour l'identification et la remédiation de CVE.",
+                        "Validation : Infrastructure résiliente face aux attaques courantes et conformité renforcée."
                     ]
                 },
                 {
-                    code: "AC21.04",
-                    label: "Étudier les vecteurs d'attaque et les vulnérabilités",
-                    trace: "Projet personnel : Casseur de mots de passe",
+                    code: "AC33.04",
+                    label: "Déployer et maintenir un réseau d'organisation en fonction de ses besoins",
+                    trace: "Infrastructure Cloud Privé & Stage Diag2Tec",
                     points: [
-                        "Analyse des algorithmes MD5, bcrypt : évaluation comparative du temps de cassage sur GPU virtuel (simulateur) et CPU.",
-                        "Compréhension des rôles des « salt » et « pepper » dans le stockage sécurisé, expérimentation pour mesurer la résistance des hachages à force brute.",
-                        "Validation : série de benchmarks montrant qu'un même fichier wordlist génère 14 M de tentatives en 15 s, démontrant l'importance de rounds élevés sur bcrypt."
+                        "Déploiement d'une infrastructure distribuée sur VPS et NAS pour répondre aux besoins de stockage et de calcul.",
+                        "Mise en place de réseaux Docker isolés pour séparer les services critiques (base de données, front-end, authentification).",
+                        "Validation : Connectivité fluide et sécurisée entre les différents services, avec une segmentation réseau respectant les bonnes pratiques."
                     ]
                 }
             ]
         },
         {
             id: 2,
-            title: "Gérer des données de l'information",
-            niveau: "Niveau 2",
-            reference: "Concevoir et exploiter une base de données relationnelle, sécuriser et optimiser l'accès aux données, assurer la traçabilité et la confidentialité.",
+            title: "Adapter des applications sur un ensemble de supports",
+            niveau: "Niveau 3",
+            reference: "Choisir des architectures adaptées, faire évoluer des applications existantes et intégrer des solutions en production.",
             items: [
                 {
-                    code: "AC22.01",
-                    label: "Concevoir une base de données relationnelle",
-                    trace: "Site e-commerce (SAE en BUT 2)",
+                    code: "AC31.01",
+                    label: "Choisir et implémenter les architectures adaptées",
+                    trace: "Application de vote électronique",
                     points: [
-                        "Modélisation complète du MCD sous MySQL Workbench : entités « Utilisateur », « Produit », « Commande », « Panier », « Paiement » reliées par des associations cardinalisées.",
-                        "Création de triggers pour gérer la réduction de stock à chaque commande, historique des commandes, et mise à jour des statuts (« en attente », « expédiée », « livrée »).",
-                        "Procédures stockées pour calculer le panier total, appliquer des promotions, et générer automatiquement un invoice PDF via PHP.",
-                        "Validation : tests unitaires sous PHPMyAdmin et vérification que chaque trigger s'exécute correctement lorsque l'on insère une nouvelle commande ou que l'on met à jour l'état."
+                        "Conception d'une architecture Fullstack avec Vue.js en front-end et Spring Boot en back-end.",
+                        "Intégration d'un système de chiffrement asymétrique (ElGamal) pour garantir la confidentialité des votes.",
+                        "Mise en place de communications en temps réel sécurisées via des WebSockets TLS.",
+                        "Validation : Architecture robuste, évolutive et capable de garantir l'intégrité et le secret des suffrages."
                     ]
                 },
                 {
-                    code: "AC22.02",
-                    label: "Sécuriser l'accès aux données (injections, rôles, chiffrement)",
-                    trace: "Application de vote électronique (SAE BUT 2)",
+                    code: "AC31.02",
+                    label: "Faire évoluer une application existante",
+                    trace: "Stage à l'Unité de Thérapie Cellulaire (CHU Montpellier)",
                     points: [
-                        "Mise en place de requêtes préparées (PreparedStatements) en Java pour éviter les injections SQL.",
-                        "Chiffrement des bulletins de vote à l'aide d'AES avant insertion en base : chaque bulletin stocké est chiffré sous une clé générée dynamiquement, seule la clé privée est conservée sur un serveur dédié.",
-                        "Gestion des rôles SQL : compte « admin » pour l'ouverture/fermeture du vote, compte « lecteur » avec droits SELECT uniquement.",
-                        "Validation : audit manuel des logs de base, tentative d'injection SQL bloquée systématiquement, vérification que sans la clé AES les données sont illisibles."
+                        "Remise en service et optimisation d'un applicatif métier existant développé en PHP et JavaScript.",
+                        "Amélioration des performances pour l'exploitation d'une base de données SQL complexe et volumineuse.",
+                        "Adaptation de l'interface pour correspondre aux nouveaux besoins des biologistes et techniciens.",
+                        "Validation : Gain de temps significatif pour les utilisateurs lors des requêtes et amélioration de l'ergonomie."
                     ]
                 },
                 {
-                    code: "AC22.03",
-                    label: "Optimiser les performances d'une base de données",
-                    trace: "Stage d'exploitation de base de données (CHU)",
+                    code: "AC31.03",
+                    label: "Intégrer des solutions dans un environnement de production",
+                    trace: "Stage chez Diag2Tec",
                     points: [
-                        "Analyse de requêtes lentes via EXPLAIN et création d'index sur colonnes fréquemment filtrées (ex. : date_analyse, num_patient).",
-                        "Partitionnement de tables volumineuses (> 10 millions de lignes) sur la date d'échantillonnage, afin d'accélérer l'historique des requêtes.",
-                        "Écriture de vues matérialisées (via tables temporaires) pour rapatrier les données utiles aux biologistes : temps de réponse de 20 s à < 1 s.",
-                        "Validation : tests avant/après partitionnement, statistiques d'utilisation mesurées dans INFORMATION_SCHEMA."
-                    ]
-                },
-                {
-                    code: "AC22.04",
-                    label: "Assurer la traçabilité et la confidentialité des données",
-                    trace: "Application de vote électronique & Site e-commerce",
-                    points: [
-                        "Mise en place d'un journal d'audit (table logs) : enregistrement de chaque action (INSERT, UPDATE, DELETE) avec horodatage, utilisateur, IP d'origine.",
-                        "Chiffrement AES des champs sensibles : mots de passe (bcrypt), numéros de carte bancaire (AES), bulletins de vote (AES).",
-                        "Politique de rôles pour l'accès aux logs : seuls les administrateurs peuvent lire les logs, les développeurs n'ont que le droit d'insertion.",
-                        "Validation : contrôle régulier des logs conférences internes, test de déchiffrement uniquement autorisé via outil en console sécurisé."
+                        "Déploiement de l'application web sécurisée et de l'infrastructure distribuée en environnement de production.",
+                        "Optimisation continue d'une interface Vue.js et de pipelines R/Bash pour les besoins métiers.",
+                        "Mise en production d'un workflow CI/CD permettant des mises à jour fluides sans interruption de service.",
+                        "Validation : Stabilité des services en production et satisfaction des utilisateurs finaux."
                     ]
                 }
             ]
         },
         {
             id: 3,
-            title: "Conduire un projet",
-            niveau: "Niveau 2",
-            reference: "Formaliser les besoins, planifier selon un cadre Agile/classique, organiser le suivi, communiquer avec les parties prenantes.",
+            title: "Manager une équipe informatique",
+            niveau: "Niveau 3",
+            reference: "Organiser une veille technologique, identifier les enjeux de l'innovation, guider le changement et accompagner le management.",
             items: [
                 {
-                    code: "AC23.01",
-                    label: "Identifier les besoins du client et de l'utilisateur",
-                    trace: "Formulaire d'impression d'étiquettes au CHU",
+                    code: "AC36.01",
+                    label: "Organiser et partager une veille technologique et informationnelle",
+                    trace: "Alternance Cybersécurité & Projets Personnels",
                     points: [
-                        "Ateliers de recueil de besoins avec biologistes et techniciens : interviews semi-structurées pour lister les champs obligatoires (échantillon, test, date, opérateur).",
-                        "Rédaction d'un cahier des charges détaillant l'interface graphique (simple, avec sélection déroulante) réduit au minimum le risque d'erreur de saisie.",
-                        "Prototypage rapide en PHP/HTML : présentation à l'utilisateur final, recueil de feedbacks, itérations pour optimiser la lisibilité et l'ergonomie.",
-                        "Validation : tests utilisateurs documentés, plus de 90 % de satisfaction sur l'efficacité et la rapidité lors des premières utilisations réelles en labo."
+                        "Veille continue sur les nouvelles vulnérabilités (CVE), les outils de pentesting (Nmap, Nessus, Hashcat) et les pratiques DevSecOps.",
+                        "Partage régulier des bonnes pratiques de sécurité avec l'équipe de développement lors du stage chez Diag2Tec.",
+                        "Validation : Anticipation des failles de sécurité et sensibilisation des collaborateurs aux risques numériques."
                     ]
                 },
                 {
-                    code: "AC23.02",
-                    label: "Définir et mettre en œuvre une démarche de suivi de projet",
-                    trace: "Application de vote électronique (VueJS + Spring)",
+                    code: "AC36.02",
+                    label: "Identifier les enjeux de l'économie de l'innovation numérique",
+                    trace: "Infrastructure Cloud Privé souveraine",
                     points: [
-                        "Mise en place d'un tableau Kanban sous GitLab : colonnes « À faire », « En cours », « À valider », « Terminé ». Chaque tâche (User Story) décrit une fonctionnalité (authentification, chiffrement, interface).",
-                        "Sprint planning hebdomadaire, définition d'Objectifs Clés (OKR) : par exemple, « Implémenter le protocole RSA pour le chiffrement des clés », « Livrer l'interface de vote pour test bêta ».",
-                        "Revue de sprint avec démonstration à l'équipe pédagogique et aux utilisateurs test : bilan des fonctionnalités, ajustement des user stories.",
-                        "Validation : respect du planning sur 4 sprints, release candidate déployée dès Semaine 8, avec retours positifs sur la conformité fonctionnelle et la stabilité."
+                        "Choix stratégique de solutions open-source et souveraines pour l'infrastructure (Docker, Keycloak, Traefik).",
+                        "Évaluation de l'impact économique (réduction des coûts de licence) et des enjeux de souveraineté des données.",
+                        "Validation : Déploiement d'une solution à la fois économique, performante et respectueuse du RGPD."
                     ]
                 },
                 {
-                    code: "AC23.03",
-                    label: "Identifier les critères de faisabilité d'un projet informatique",
-                    trace: "Mini-projet ESP32 (C/Arduino)",
+                    code: "AC36.03",
+                    label: "Guider la conduite du changement informatique au sein d'une organisation",
+                    trace: "Stage CHU Montpellier",
                     points: [
-                        "Étude de faisabilité technique : évaluation des contraintes matérielles (RAM limitée à 520 ko, espace Flash de 4 Mo) et choix du module ESP32 Low-Power.",
-                        "Analyse de l'environnement réseau : protocole Wi-Fi utilisé pour un mini-serveur HTTP local, estimation du débit suffisant pour l'affichage d'une page captive.",
-                        "Planification en autonomie : diagramme de Gantt simplifié avec jalons « Conception des schémas pin », « Développement du serveur », « Tests sur prototype ».",
-                        "Validation : démonstration sur maquette physique, portail captif fonctionnel couvrant un rayon de 10 m, temps de connexion < 2 s, preuve de faisabilité dans un délai de 3 semaines."
+                        "Accompagnement des professionnels de santé (biologistes) dans la prise en main de l'applicatif métier optimisé.",
+                        "Rédaction de documentations claires et recueil de feedbacks pour ajuster l'outil aux processus métiers réels.",
+                        "Validation : Adoption réussie de l'outil par les équipes, avec une réduction des erreurs de saisie."
                     ]
                 },
                 {
-                    code: "AC23.04",
-                    label: "Formaliser les processus présents dans une organisation",
-                    trace: "Application de vote électronique & Site e-commerce",
+                    code: "AC36.04",
+                    label: "Accompagner le management de projet informatique",
+                    trace: "Projet de vote électronique & Infrastructure Cloud",
                     points: [
-                        "Cartographie des flux métier pour l'e-commerce : du « parcours d'achat » (sélection, ajout au panier, validation) jusqu'à la « facturation » (paiement, génération PDF, mise à jour BDD).",
-                        "Diagramme BPMN pour le vote électronique : phases « Authentification voter », « Chiffrement bulletin », « Envoi au serveur de vote », « Dépouillement ».",
-                        "Documentation détaillée (README, wiki GitLab) pour chaque micro-processus : acteurs, entrées/sorties, contraintes réglementaires (RGPD).",
-                        "Validation : présentation des processus à l'équipe pédagogique, vérification de l'exhaustivité et conformité réglementaire (RGPD, CNIL) par le responsable tuteur stage."
+                        "Coordination du travail en équipe de 3 à 5 personnes : planification des sprints, répartition des tâches selon les compétences.",
+                        "Utilisation d'outils collaboratifs (GitLab CI/CD, Kanban) pour le suivi de l'avancement et la gestion des versions.",
+                        "Validation : Respect des jalons de livraison et succès des soutenances de projet devant l'équipe pédagogique."
                     ]
                 }
             ]
@@ -175,7 +161,7 @@ const Apprentissage = () => {
                 <div className="heading-section apprentissage-header">
                     <h1 className="big">Apprentissage</h1>
                     <h2>Portfolio de Compétences</h2>
-                    <p>Semestre 4 - Parcours DACS (BUT Informatique)</p>
+                    <p>Semestre 6 - Parcours DACS (BUT Informatique)</p>
                 </div>
 
                 {/* Introduction Card */}
@@ -184,7 +170,7 @@ const Apprentissage = () => {
                         <h3>Identification des apprentissages critiques</h3>
                         <p>
                             Dans le cadre du <strong>BUT Informatique</strong>, parcours DACS, j'ai ciblé trois compétences
-                            dont le niveau 2 est l'aboutissement :
+                            dont le niveau 3 est l'aboutissement :
                         </p>
                         <div className="competences-summary">
                             {competences.map((comp, index) => (
@@ -201,7 +187,7 @@ const Apprentissage = () => {
                         <div className="intro-details">
                             <p>Pour chacune, j'ai référencé :</p>
                             <ul>
-                                <li>Les <em>apprentissages critiques</em> (éléments essentiels de niveau 2 dans le référentiel officiel)</li>
+                                <li>Les <em>apprentissages critiques</em> (éléments essentiels de niveau 3 dans le référentiel officiel)</li>
                                 <li>Les <em>composantes essentielles</em> associées</li>
                                 <li>Les <em>traces d'activités</em> attestant de leur maîtrise, avec argumentation</li>
                             </ul>
@@ -270,9 +256,9 @@ const Apprentissage = () => {
                     <div className="conclusion-card">
                         <h3>Conclusion</h3>
                         <p>
-                            Ces trois compétences, atteintes au niveau 2, sont soutenues par des traces d'activités variées
+                            Ces trois compétences, atteintes au niveau 3, sont soutenues par des traces d'activités variées
                             (stages, projets personnels, SAE), permettant de justifier chaque élément essentiel du référentiel.
-                            Elles témoignent de ma progression au semestre 4 du BUT Informatique, parcours DACS,
+                            Elles témoignent de ma progression au semestre 6 du BUT Informatique, parcours DACS,
                             en combinant <strong>technicité</strong>, <strong>rigueur</strong> et <strong>travail collaboratif</strong>.
                         </p>
                     </div>
